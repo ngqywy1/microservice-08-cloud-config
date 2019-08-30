@@ -7,7 +7,7 @@ server:
   port: 8003
 mybatis:
   config-location: classpath:mybatis/mybatis.cfg.xml 
-  type-aliases-package: com.mengxuegu.springcloud.entities
+  type-aliases-package: com.itywy.springcloud.entity
   mapper-locations: classpath:mybatis/mapper/**/*.xml
 spring:
   profiles: dev # 开发环境
@@ -39,7 +39,7 @@ server:
   port: 8003
 mybatis:
   config-location: classpath:mybatis/mybatis.cfg.xml 
-  type-aliases-package: com.mengxuegu.springcloud.entities
+  type-aliases-package: com.itywy.springcloud.entity
   mapper-locations: classpath:mybatis/mapper/**/*.xml
 spring:
   profiles: prod # 生产环境
