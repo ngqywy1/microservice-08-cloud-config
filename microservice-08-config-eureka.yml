@@ -1,40 +1,42 @@
+#注意：如果在记事本上编写，下面的缩进不要使用Tab来缩进，不然报错
 spring:
   profiles:
-    active: dev
-
+    active: dev # 激活开发环境配置
 ---
 server:
-  port: 6003
+  port: 6003 #端口号
 spring:
-  profiles: dev
+  profiles: dev # 开发环境
   application:
-    name: microservice-08-config-eureka
+    name: microservice-config-eureka
+    
 eureka:
   instance:
-    hostname: eureka6003.com
+    hostname: eureka6003.com 
   client:
-    registerWithEureka: false
-   fetchRegistry: false
-   serviceUrl:
-    defaultZone: http://eureka6003.com:6003/eureka/
+    registerWithEureka: false 
+    fetchRegistry: false 
+    serviceUrl:
+      defaultZone: http://eureka6003.com:6003/eureka/
   server:
-   enable-self-preservation: false # 禁用自我保护机制*****************
+    enable-self-preservation: false # 禁用自我保护机制*****************
 ---
 server:
-port: 6003 #端口号
+  port: 6003 #端口号
 spring:
-profiles: prod # 生产环境
-application:
- name: microservice-config-eureka
+  profiles: prod # 生产环境
+  application:
+    name: microservice-config-eureka
+
 eureka:
-instance:
- hostname: eureka6003.com
-client:
- registerWithEureka: false
- fetchRegistry: false
- serviceUrl:
-  defaultZone: http://eureka6003.com:6003/eureka/
-server:
- enable-self-preservation: true # 开启自我保护机制*****************
-   
+  instance:
+    hostname: eureka6003.com 
+  client:
+    registerWithEureka: false 
+    fetchRegistry: false 
+    serviceUrl:
+      defaultZone: http://eureka6003.com:6003/eureka/
+  server:
+    enable-self-preservation: true # 开启自我保护机制*****************
+    
 #保存时注意，选择 UTF-8 保存
