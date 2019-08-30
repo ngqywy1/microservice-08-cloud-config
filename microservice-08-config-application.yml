@@ -8,12 +8,12 @@ server:
 spring:
     profiles: dev # 开发环境
     application:
-        name: microservice-08-config-dev
+        name: microservice-08-config-dev
 ---
 server:
     port: 4002 #端口号
 spring:
     profiles: prod # 生产环境
     application:
-        name: microservice-08-config-prod
+        name: microservice-08-config-prod
 #保存时注意，选择 UTF-8 保存
