@@ -4,36 +4,36 @@ spring:
 
 ---
 server:
-  port: 6001
+  port: 6003
 spring:
   profiles: dev
   application:
     name: microservice-08-config-eureka
 eureka:
   instance:
-    hostname: eureka6001.com
+    hostname: eureka6003.com
   client:
     registerWithEureka: false
    fetchRegistry: false
    serviceUrl:
-    defaultZone: http://eureka6001.com:6001/eureka/
+    defaultZone: http://eureka6003.com:6003/eureka/
   server:
    enable-self-preservation: false # 禁用自我保护机制*****************
 ---
 server:
-port: 6001 #端口号
+port: 6003 #端口号
 spring:
 profiles: prod # 生产环境
 application:
  name: microservice-config-eureka
 eureka:
 instance:
- hostname: eureka6001.com
+ hostname: eureka6003.com
 client:
  registerWithEureka: false
  fetchRegistry: false
  serviceUrl:
-  defaultZone: http://eureka6001.com:6001/eureka/
+  defaultZone: http://eureka6003.com:6003/eureka/
 server:
  enable-self-preservation: true # 开启自我保护机制*****************
    
